@@ -14,7 +14,7 @@ try:
     for i in lis['list']:
         if "https://github.com" in lis['list'][i]['given_url']:
             print(lis['list'][i]['given_url'])
-            os.system("git clone {}".format(lis['list'][i]['given_url']))
+            os.system("git clone {} &".format(lis['list'][i]['given_url']))
             p.delete(i)
 except PocketException as e:
     print(e.message)
