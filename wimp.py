@@ -15,6 +15,6 @@ try:
         if "github.com" in lis['list'][i]['given_url']:
             print(lis['list'][i]['given_url'])
             os.system("git clone {}".format(lis['list'][i]['given_url']))
-            p.delete(lis['list'][i]['item_id'])
+            p.delete(i)
 except PocketException as e:
     print(e.message)
